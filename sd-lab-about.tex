@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_GB
 \documentclass[handout]{beamer}\mode<presentation>{\usetheme{AMSCesenaPurpleAndGold}}
 % \documentclass[presentation]{beamer}\mode<presentation>{\usetheme{AMSCesenaBleu}}
 %%%%
@@ -5,7 +6,7 @@
 \usepackage{common}
 \usepackage{courses}
 
-\title[L0 -- About Lab]{About the Lab}
+\title[L0 -- About the Lab]{About the Lab}
 %
 \subtitle[SD]
 {Distributed Systems / Technologies\\\scriptsize Sistemi Distribuiti / Tecnologie}
@@ -21,14 +22,14 @@
 
 \setbeamercovered{transparent}
 
-% \AtBeginSection[]
-% {
-% 	\begin{frame}[c]\frametitle{Next in Line\ldots}
-% 		\begin{multicols}{2}
-% 			\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-% 		\end{multicols}
-% 	\end{frame}
-% }
+\AtBeginSection[]
+{
+	\begin{frame}[c]\frametitle{Next in Line\ldots}
+%		\begin{multicols}{2}
+			\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
+%		\end{multicols}
+	\end{frame}
+}
 
 \begin{document}
 
@@ -40,16 +41,273 @@
     % \end{multicols}
 \end{frame}
 
-\section{Motivation}
+\section{Vision}
+
+\subsection{Dimensions of Software (Engineering)}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Dimensions of Software (Engineering)}
+
+    \begin{block}{In your Bachelor's you learnt how to properly \textbf{design}}
+    	\begin{itemize}
+    		\item the \alert{structure} of \emph{non-concurrent} systems
+    		\item the \alert{behaviour} of most common algorithm in computer science (CS)
+    		\item and how to implement \emph{non-distributed} systems
+    	\end{itemize}
+    \end{block}
+
+	\framebreak
+	
+	\begin{alertblock}{However, there are 3 major \textbf{dimensions} of Software (Engineering)}
+		\begin{description}
+			\item[structure] -- how domain entities are composed and relate
+			\item[behaviour] -- which algorithms govern their behaviour
+			\item[\textbf{interaction}] -- when they are allowed to exchange information, and how
+		\end{description}
+	\end{alertblock}
+	%
+	\hint{these are just insights, not definitions}
+	
+	\framebreak
+	
+	\begin{exampleblock}{In concurrent or even \textbf{distributed} systems}
+		\begin{itemize}
+			\item the interaction dimension is of paramount importance
+			\item as well as aspects related to 
+			%
+			\begin{itemize}
+				\item the \alert{software architecture}
+				\item the \alert{control flow(s)}
+			\end{itemize}
+		\end{itemize}
+	\end{exampleblock}
+
+	\bigskip
+
+%	\begin{exampleblock}{In fact}
+	One can describe and design concurrent/distributed systems as:
+	%
+	\begin{itemize}
+		\item systems composed by several \alert{pro-active} entities
+		%
+		\begin{itemize}
+			\item[ie] entities \alert{encapsulating} ($\approx$ having) their own \alert{control flow}
+		\end{itemize}
+		\item \alert{interacting} among each others
+		\item possibly, over the \alert{network}
+	\end{itemize}
+%	\end{exampleblock}
+
+\end{frame}
+
+\subsection{Goal of the Lab}
 
 \begin{frame}
-\frametitle{Motivation}
+	\frametitle{Goal of the Lab}
+	
+	During the Lab lessons, we will progressively introduce you
+	%
+	\vfill
+	%
+	\begin{itemize}
+		\item to the \alert{design} of concurrent \& distributed systems (C\&DS),
+		
+		\vfill
+		
+		\item while providing a taste of 
+		%
+		\begin{itemize}
+			\item the challenges \& subtleties posed by C\&DS
+			\item the most common architectural choices for C\&DS
+			\item the most adequate design \& programming abstractions for C\&DS
+		\end{itemize}
+	
+	\end{itemize}
+	
+\end{frame}
 
-    \begin{itemize}
-        \item Fill
+\subsection{Engineering concurrent \& distributed systems}
 
-    \end{itemize}
+\begin{frame}[allowframebreaks]
+	\frametitle{Engineering concurrent \& distributed systems (C\&DS)}
+	
+	Engineering C\&DS requires encompassing several, progressive phases
+	%
+	\begin{enumerate}
+		\item modelling
+		\item design
+		\item implementation
+		\item deployment
+	\end{enumerate}
+	
+	\framebreak
+	
+	\begin{block}{\textbf{Modellers} must define \textbf{domain}-related aspects}
+		\begin{enumerate}
+			\item which and how many sorts \alert{domain entities} are involved into a system,
+			\item whether they are \alert{pro-active} or \alert{reactive},
+			\item what's their \alert{behavioural specification}, and
+			\item when with whom they can \alert{interact}
+		\end{enumerate}
+	\end{block}
 
+	\bigskip
+	
+	\begin{itemize}
+		\item Modellers must thus be able to govern:
+		%
+		\begin{itemize}
+			\item systems composed by several \alert{loci of control}, 
+			\item as well as the \alert{communication means} among them
+		\end{itemize}
+	
+		\bigskip
+	
+		\item[$\rightarrow$] OOP patterns and UML are not adequate to capture these aspects
+		%
+		\begin{itemize}
+			\item we need higher level notions such as \alert{agents}, \alert{tuple spaces}, etc
+		\end{itemize}
+	\end{itemize}
+
+	\framebreak
+	
+	\begin{block}{\textbf{Designers} must address \textbf{architectural} aspects}
+		\begin{itemize}
+			\item whether the interaction involves \alert{two or more} entities
+			\item which entities must \alert{initiate} interaction (acting as clients)
+			\item which entities must \alert{wait} for interaction to be initiated (servers)
+			\item whether interaction should be me \alert{mediated} or not
+			\item which information should be provided by each entity, and \alert{when}
+			\item how should this information be \alert{structured}
+		\end{itemize}
+	\end{block}
+
+	\bigskip
+	
+	\begin{itemize}
+		\item Designers must thus be able to govern:
+		%
+		\begin{itemize}
+			\item interaction patterns (request-response, publish-subscribe, etc.),
+			\item and their properties 
+		\end{itemize}
+		
+		\bigskip
+		
+		\item[$\rightarrow$] method calls or sockets from OOP programming are not adequate
+		%
+		\begin{itemize}
+			\item we need higher level notions such as \alert{FIPA's IP}, or \alert{\linda{}'s primitives}
+		\end{itemize}
+	\end{itemize}
+
+	\framebreak
+	
+	\begin{block}{\textbf{Engineers} must tackle \textbf{technical} aspects}
+		\begin{enumerate}
+			\item let several loci of control \alert{co-exist} in an efficient \& scalable way\ldots
+			%
+			\begin{itemize}
+				\item possibly in spite of \alert{distribution}
+				\item possibly in spite of different \alert{execution platforms}
+			\end{itemize}
+			\item make their interaction \alert{observable \& debuggable}
+			\item chose the most adequate technological protocol\ldots 
+			\item \ldots and data representation format 
+			%
+			\begin{itemize}
+				\item in order to keep the system open, interoperable, evolvable, yet efficient
+			\end{itemize}
+		\end{enumerate}
+	\end{block}
+
+	\medskip
+
+	\begin{itemize}
+		\item Engineers must thus be able to govern:
+		%
+		\begin{itemize}
+			\item middleware technologies (e.g. \jade{})
+			\item architectural styles (e.g. ReST)
+			\item application-level protocols (e.g. HTTP),
+			\item data-representation formats (e.g. JSON, YAML)
+		\end{itemize}
+
+	\end{itemize}
+	
+\end{frame}
+
+\section{In practice}
+
+\subsection{Structure of the Lab}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Structure of the Lab}
+	
+	An end-to-end path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
+	%
+	\medskip
+	%
+	\begin{enumerate}
+		\item you'll firstly learn how to program non-distributed concurrent systems
+		%
+		\begin{itemize}
+			\item through \alert{asynchrnous programming}
+		\end{itemize}
+	
+		\medskip
+	
+		\item you'll then practice with systems involving several loci of control
+		%
+		\begin{itemize}
+			\item e.g. \alert{multi-agent systems}
+			\item learning how \jade{} agents work and can be built from scratch
+		\end{itemize}
+	
+		\medskip
+		
+		\item you'll then control agent's interactions through \alert{\linda{}'s tuple spaces}
+		%
+		\begin{itemize}
+			\item learning how they can be realised from scratch
+			\item or exploited in flexible ways to implement several \alert{interaction patterns}
+		\end{itemize}
+		
+		\framebreak
+		
+		\item you'll then leverage \alert{web services} to make tuple spaces distributed
+		%
+		\begin{itemize}
+			\item learning about web-services and the ReST architectural style
+			\item learning how non-distributed systems can be made distributed
+		\end{itemize}
+		
+		\medskip
+		
+		\item you'll then exploit tuple spaces to let agents interact \alert{over the network}
+		%
+		\begin{itemize}
+			\item learning how to make distribution transparent in your system
+			\item learning about the client- and server-side of a distributed system
+		\end{itemize}
+	
+		\medskip
+	
+		\item you should finally have built your own framework for C\&DS
+		%
+		\begin{itemize}
+			\item enabling experiments and exercises about, e.g.:
+			%
+			\begin{itemize}
+				\item deployment
+				\item replication
+				\item consistency
+			\end{itemize}
+		\end{itemize}
+		
+	\end{enumerate}
+	
 \end{frame}
 
 
