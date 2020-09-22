@@ -4,7 +4,6 @@
 %%%%
 
 \usepackage{common}
-\usepackage{courses}
 
 \title[L0 -- About the Lab]{About the Lab}
 %
@@ -57,7 +56,7 @@
     \end{block}
 
 	\framebreak
-	
+
 	\begin{alertblock}{However, there are 3 major \textbf{dimensions} of Software (Engineering)}
 		\begin{description}
 			\item[structure] -- how domain entities are composed and relate
@@ -67,13 +66,13 @@
 	\end{alertblock}
 	%
 	\hint{these are just insights, not definitions}
-	
+
 	\framebreak
-	
+
 	\begin{exampleblock}{In concurrent or even \textbf{distributed} systems}
 		\begin{itemize}
 			\item the interaction dimension is of paramount importance
-			\item as well as aspects related to 
+			\item as well as aspects related to
 			%
 			\begin{itemize}
 				\item the \alert{software architecture}
@@ -104,33 +103,33 @@
 
 \begin{frame}
 	\frametitle{Goal of the Lab}
-	
+
 	During the Lab lessons, we will progressively introduce you
 	%
 	\vfill
 	%
 	\begin{itemize}
 		\item to the \alert{design} of concurrent \& distributed systems (C\&DS),
-		
+
 		\vfill
-		
-		\item while providing a taste of 
+
+		\item while providing a taste of
 		%
 		\begin{itemize}
 			\item the challenges \& subtleties posed by C\&DS
 			\item the most common architectural choices for C\&DS
 			\item the most adequate design \& programming abstractions for C\&DS
 		\end{itemize}
-	
+
 	\end{itemize}
-	
+
 \end{frame}
 
 \subsection{Engineering concurrent \& distributed systems}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Engineering concurrent \& distributed systems (C\&DS)}
-	
+
 	Engineering C\&DS requires encompassing several, progressive phases
 	%
 	\begin{enumerate}
@@ -139,9 +138,9 @@
 		\item implementation
 		\item deployment
 	\end{enumerate}
-	
+
 	\framebreak
-	
+
 	\begin{block}{\textbf{Modellers} must define \textbf{domain}-related aspects}
 		\begin{enumerate}
 			\item which and how many sorts \alert{domain entities} are involved into a system,
@@ -152,17 +151,17 @@
 	\end{block}
 
 	\bigskip
-	
+
 	\begin{itemize}
 		\item Modellers must thus be able to govern:
 		%
 		\begin{itemize}
-			\item systems composed by several \alert{loci of control}, 
+			\item systems composed by several \alert{loci of control},
 			\item as well as the \alert{communication means} among them
 		\end{itemize}
-	
+
 		\bigskip
-	
+
 		\item[$\rightarrow$] OOP patterns and UML are not adequate to capture these aspects
 		%
 		\begin{itemize}
@@ -171,7 +170,7 @@
 	\end{itemize}
 
 	\framebreak
-	
+
 	\begin{block}{\textbf{Designers} must address \textbf{architectural} aspects}
 		\begin{itemize}
 			\item whether the interaction involves \alert{two or more} entities
@@ -184,17 +183,17 @@
 	\end{block}
 
 	\bigskip
-	
+
 	\begin{itemize}
 		\item Designers must thus be able to govern:
 		%
 		\begin{itemize}
 			\item interaction patterns (request-response, publish-subscribe, etc.),
-			\item and their properties 
+			\item and their properties
 		\end{itemize}
-		
+
 		\bigskip
-		
+
 		\item[$\rightarrow$] method calls or sockets from OOP programming are not adequate
 		%
 		\begin{itemize}
@@ -203,7 +202,7 @@
 	\end{itemize}
 
 	\framebreak
-	
+
 	\begin{block}{\textbf{Engineers} must tackle \textbf{technical} aspects}
 		\begin{enumerate}
 			\item let several loci of control \alert{co-exist} in an efficient \& scalable way\ldots
@@ -213,8 +212,8 @@
 				\item possibly in spite of different \alert{execution platforms}
 			\end{itemize}
 			\item make their interaction \alert{observable \& debuggable}
-			\item chose the most adequate technological protocol\ldots 
-			\item \ldots and data representation format 
+			\item chose the most adequate technological protocol\ldots
+			\item \ldots and data representation format
 			%
 			\begin{itemize}
 				\item in order to keep the system open, interoperable, evolvable, yet efficient
@@ -235,7 +234,7 @@
 		\end{itemize}
 
 	\end{itemize}
-	
+
 \end{frame}
 
 \section{Organisation}
@@ -244,7 +243,7 @@
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Structure of the Lab}
-	
+
 	An end-to-end path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
 	%
 	\medskip
@@ -255,45 +254,45 @@
 		\begin{itemize}
 			\item through \alert{asynchrnous programming}
 		\end{itemize}
-	
+
 		\medskip
-	
+
 		\item you'll then practice with systems involving several loci of control
 		%
 		\begin{itemize}
 			\item e.g. \alert{multi-agent systems}
 			\item learning how \jade{} agents work and can be built from scratch
 		\end{itemize}
-	
+
 		\medskip
-		
+
 		\item you'll then control agent's interactions through \alert{\linda{}'s tuple spaces}
 		%
 		\begin{itemize}
 			\item learning how they can be realised from scratch
 			\item or exploited in flexible ways to implement several \alert{interaction patterns}
 		\end{itemize}
-		
+
 		\framebreak
-		
+
 		\item you'll then leverage \alert{web services} to make tuple spaces distributed
 		%
 		\begin{itemize}
 			\item learning about web-services and the ReST architectural style
 			\item learning how non-distributed systems can be made distributed
 		\end{itemize}
-		
+
 		\medskip
-		
+
 		\item you'll then exploit tuple spaces to let agents interact \alert{over the network}
 		%
 		\begin{itemize}
 			\item learning how to make distribution transparent in your system
 			\item learning about the client- and server-side of a distributed system
 		\end{itemize}
-	
+
 		\medskip
-	
+
 		\item you should finally have built your own framework for C\&DS
 		%
 		\begin{itemize}
@@ -305,16 +304,16 @@
 				\item consistency
 			\end{itemize}
 		\end{itemize}
-		
+
 	\end{enumerate}
-	
+
 \end{frame}
 
 \subsection{Required technologies and Skills}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Required technologies and Skills}
-	
+
 	\begin{block}{Legend}
 		\begin{multicols}{2}
 			\begin{itemize}
@@ -323,7 +322,7 @@
 			\end{itemize}
 		\end{multicols}
 	\end{block}
-	
+
 	\begin{alertblock}{Required}
 		\begin{itemize}
 			\item[$\checkmark$] Decentralised Version Control Systems and \alert{Git}
@@ -331,17 +330,17 @@
 			\begin{itemize}
 				\item useful resources: \ccite{pianiniDvcs, proGit}
 			\end{itemize}
-		
+
 			\vfill
-		
+
 			\item[$\rightarrow$] Build automation tools and \alert{Gradle}
 			%
 			\begin{itemize}
 				\item useful resources: \ccite{pianiniBuildAutomation, gradleUserGuide}
 			\end{itemize}
-		
+
 			\vfill
-			
+
 			\item Java programming, and, in particular:
 			%
 			\begin{itemize}
@@ -350,7 +349,7 @@
 				\item[$\checkmark$] multi-threading API (useful resources: \ccite{Lea1999, Oaks2004, Garg2004, Goetz2006})
 				\item[$\rightarrow$] asynchronous programming API
 			\end{itemize}
-			
+
 		\end{itemize}
 	\end{alertblock}
 
@@ -358,7 +357,7 @@
 		\begin{itemize}
 			\item[$\checkmark$] Shell scripting and \alert{Bash}
 			\item[$\rightarrow$] Containerisation and \alert{Docker}
-			\item[$\checkmark$] Basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})	
+			\item[$\checkmark$] Basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})
 		\end{itemize}
 	\end{exampleblock}
 
@@ -367,14 +366,14 @@
 			\item[!] Follow the instructions provided here: \ccite{envSetup}
 		\end{itemize}
 	\end{alertblock}
-	
-\end{frame}	
+
+\end{frame}
 
 \section{Conventions and Suggestions}
 
 \begin{frame}%[allowframebreaks]
 	\frametitle{About lab exercises}
-	
+
 	\begin{itemize}
 		\item You're supposed to learn something, not just solving puzzles
 		%
@@ -384,9 +383,9 @@
 			\item[$\rightarrow$] ask for help on the forum
 			\item[$\rightarrow$] compare/discuss with your colleagues
 		\end{itemize}
-	
+
 		\vfill
-		
+
 		\item Comprehension of Lab-related topics is checked before final exam:
 		%
 		\begin{itemize}
@@ -394,21 +393,107 @@
 			\item check performed by tutor(s)
 			\item students must explicitly ask for the check, via email
 		\end{itemize}
-	
+
 		\vfill
-		
+
 		\item Exercises are provided as GitLab repositories hosting Gradle projects
 		%
 		\begin{itemize}
 			\item you need a GitLab account $\rightarrow$ follow the instructions described in \ccite{envSetup}
 		\end{itemize}
-	
-		\vfill
-		
-		\item Solutions are pushed on the same GitLab 
-		
+
+        \vfill
+
+        \item Slides are provided as \emph{versioned} PDF, through GitHub releases
+        %
+        \begin{itemize}
+            \item[eg] \url{https://github.com/gciatto-unibo/sd-lab-environment-configuration/releases}
+            \item[eg] \url{https://github.com/gciatto-unibo/sd-lab-about/releases}
+        \end{itemize}
+
 	\end{itemize}
-	
+
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+    \frametitle{About exercises submissions}
+
+    \begin{itemize}
+        \item Solutions must be pushed on the same GitLab repository exercises have been cloned from, \alert{through Git}
+
+        \vfill
+
+        \item To this end, you create a GitLab account, following instructions provided in \ccite{envSetup}:
+        %
+        \begin{itemize}
+            \item possibly, using your institutional credentials \texttt{\alert{name.surnameN}@studio.unibo.it}
+            \item possibly, using \texttt{\alert{name.surnameN}} as username
+        \end{itemize}
+
+        \vfill
+
+        \item After that, you are supposed to request access on the DS 20-21 GitLab group:
+        %
+        \begin{itemize}
+            \item \url{https://gitlab.com/pika-lab/courses/ds/ay2021}
+        \end{itemize}
+
+        \vfill
+
+        \item Solutions must be pushed on a branch named \alert{\texttt{submissions/\textit{name.surnameN}}}, as described in \ccite{envSetup}
+        %
+        \begin{itemize}
+            \item one solution per student ($\implies$ no group submissions)
+            \item solutions provided elsewhere will be ignored
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+\frametitle{About forums}
+    \begin{itemize}
+        \item Use the forum as much as possible: \url{https://virtuale.unibo.it/mod/forum/view.php?id=331530}
+        %
+        \begin{itemize}
+            \item don't be shy :)
+            \item ask for help / explanations if are in need
+            \item ask why if you're curious
+            \item compare you solutions
+            \item be critical and provide suggestions if you feel so
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{The final project}
+
+\begin{frame}%[allowframebreaks]
+    \frametitle{About projects}
+    \begin{itemize}
+        \item Detailed rules here: \uurl{https://virtuale.unibo.it/mod/page/view.php?id=331533}
+
+        \vfill
+
+        \item Workflow overview:
+        %
+        \begin{enumerate}
+            \item Choose a project or propose one
+            \item Reserve your project on the \href{https://virtuale.unibo.it/mod/forum/view.php?id=331532}{Projects forum}
+            \item Submit an \alert{initial report}, describing your own requirements
+            \item Receive a Git repository for tracking the development of your artefacts
+            \item Develop your projects
+            \item Write the \alert{final report}
+            \item Submit your project \alert{code \& report} and ask for lab activity check
+            \item Set up an appointment for discussing your project
+        \end{enumerate}
+
+        \vfill
+
+        \item Group projects are allowed (max 3-4 persons)
+        %
+        \begin{itemize}
+            \item rule of thumb: $\sim90$ working hours per person per project
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
 %===============================================================================
