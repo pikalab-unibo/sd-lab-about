@@ -24,11 +24,11 @@
 
 \AtBeginSection[]
 {
-	\begin{frame}[c]\frametitle{Next in Line\ldots}
-%		\begin{multicols}{2}
-			\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-%		\end{multicols}
-	\end{frame}
+\begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
+%	\begin{multicols}{2}
+	\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
+%	\end{multicols}
+\end{frame}
 }
 
 \begin{document}
@@ -238,9 +238,9 @@
 	
 \end{frame}
 
-\section{In practice}
+\section{Organisation}
 
-\subsection{Structure of the Lab}
+\subsection{Structure of Lab lectures}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Structure of the Lab}
@@ -310,8 +310,126 @@
 	
 \end{frame}
 
+\subsection{Required technologies and Skills}
 
-\maketitle
+\begin{frame}[allowframebreaks]
+	\frametitle{Required technologies and Skills}
+	
+	\begin{block}{Legend}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item[$\checkmark$] We assume you know this topic
+				\item[$\rightarrow$] We teach this topic
+			\end{itemize}
+		\end{multicols}
+	\end{block}
+	
+	\begin{alertblock}{Required}
+		\begin{itemize}
+			\item[$\checkmark$] Decentralised Version Control Systems and \alert{Git}
+			%
+			\begin{itemize}
+				\item useful resources: \ccite{pianiniDvcs, proGit}
+			\end{itemize}
+		
+			\vfill
+		
+			\item[$\rightarrow$] Build automation tools and \alert{Gradle}
+			%
+			\begin{itemize}
+				\item useful resources: \ccite{pianiniBuildAutomation, gradleUserGuide}
+			\end{itemize}
+		
+			\vfill
+			
+			\item Java programming, and, in particular:
+			%
+			\begin{itemize}
+				\item[$\checkmark$] collections API (useful resources: \ccite{Naftalin2006, Bloch2008, JavaCollectionsCheatsheets})
+				\item[$\checkmark$] streams and lambdas API (useful resources: \ccite{Warburton2014, Bloch2008})
+				\item[$\checkmark$] multi-threading API (useful resources: \ccite{Lea1999, Oaks2004, Garg2004, Goetz2006})
+				\item[$\rightarrow$] asynchronous programming API
+			\end{itemize}
+			
+		\end{itemize}
+	\end{alertblock}
+
+	\begin{exampleblock}{Useful}
+		\begin{itemize}
+			\item[$\checkmark$] Shell scripting and \alert{Bash}
+			\item[$\rightarrow$] Containerisation and \alert{Docker}
+			\item[$\checkmark$] Basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})	
+		\end{itemize}
+	\end{exampleblock}
+
+	\begin{alertblock}{Setting up your own environment}
+		\begin{itemize}
+			\item[!] Follow the instructions provided here: \ccite{envSetup}
+		\end{itemize}
+	\end{alertblock}
+	
+\end{frame}	
+
+\section{Conventions and Suggestions}
+
+\begin{frame}%[allowframebreaks]
+	\frametitle{About lab exercises}
+	
+	\begin{itemize}
+		\item You're supposed to learn something, not just solving puzzles
+		%
+		\begin{itemize}
+			\item no deadline, no mark
+			\item[$\rightarrow$] take your time
+			\item[$\rightarrow$] ask for help on the forum
+			\item[$\rightarrow$] compare/discuss with your colleagues
+		\end{itemize}
+	
+		\vfill
+		
+		\item Comprehension of Lab-related topics is checked before final exam:
+		%
+		\begin{itemize}
+			\item \alert{expected workflow:} Lab activity check $\rightarrow$ Admission to final exam
+			\item check performed by tutor(s)
+			\item students must explicitly ask for the check, via email
+		\end{itemize}
+	
+		\vfill
+		
+		\item Exercises are provided as GitLab repositories hosting Gradle projects
+		%
+		\begin{itemize}
+			\item you need a GitLab account $\rightarrow$ follow the instructions described in \ccite{envSetup}
+		\end{itemize}
+	
+		\vfill
+		
+		\item Solutions are pushed on the same GitLab 
+		
+	\end{itemize}
+	
+\end{frame}
+
+%===============================================================================
+\section*{}
+%===============================================================================
+\frame{\titlepage}
+
+%===============================================================================
+\section*{\bibname}
+%===============================================================================
+
+\setbeamertemplate{page number in head/foot}{}
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[t,allowframebreaks,noframenumbering]\frametitle{\refname}
+	% \begin{frame}[c]\frametitle{\refname}
+	\footnotesize
+	%	\scriptsize
+	\bibliographystyle{plain}
+	\bibliography{sd-lab-about}
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
