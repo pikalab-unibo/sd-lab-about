@@ -43,8 +43,7 @@
 
 \subsection{Dimensions of Software (Engineering)}
 
-\begin{frame}[allowframebreaks]
-\frametitle{Dimensions of Software (Engineering)}
+\begin{frame}[c,allowframebreaks]{Dimensions of Software (Engineering)}
 
     \begin{block}{In your Bachelor's you learnt how to properly \textbf{design}}
     	\begin{itemize}
@@ -68,7 +67,7 @@
 
 	\framebreak
 
-	\begin{exampleblock}{In concurrent or even \textbf{distributed} systems}
+	\begin{exampleblock}{In concurrent and distributed systems}
 		\begin{itemize}
 			\item the interaction dimension is of paramount importance
 			\item as well as aspects related to
@@ -100,15 +99,14 @@
 
 \subsection{Goal of the Lab}
 
-\begin{frame}
-	\frametitle{Goal of the Lab}
+\begin{frame}[c]{Goal of the Lab}
 
 	During the Lab lessons, we will progressively introduce you
 	%
 	\vfill
 	%
 	\begin{itemize}
-		\item to the \alert{design} of concurrent \& distributed systems (C\&DS),
+		\item to the \alert{design} of concurrent \& distributed systems (C\&DS)
 
 		\vfill
 
@@ -126,8 +124,7 @@
 
 \subsection{Engineering Concurrent \& Distributed Systems}
 
-\begin{frame}[allowframebreaks]
-	\frametitle{Engineering Concurrent \& Distributed Systems (C\&DS)}
+\begin{frame}[c,allowframebreaks]{Engineering Concurrent \& Distributed Systems (C\&DS)}
 
 	Engineering C\&DS requires encompassing several, progressive phases
 	%
@@ -152,7 +149,7 @@
 	\bigskip
 
 	\begin{itemize}
-		\item Modellers must thus be able to govern:
+		\item modellers must thus be able to govern
 		%
 		\begin{itemize}
 			\item systems composed by several \alert{loci of control},
@@ -184,7 +181,7 @@
 	\bigskip
 
 	\begin{itemize}
-		\item Designers must thus be able to govern:
+		\item designers must thus be able to govern
 		%
 		\begin{itemize}
 			\item interaction patterns (request-response, publish-subscribe, etc.),
@@ -223,7 +220,7 @@
 	\medskip
 
 	\begin{itemize}
-		\item Engineers must thus be able to govern:
+		\item engineers must thus be able to govern
 		%
 		\begin{itemize}
 			\item middleware technologies (e.g. \jade{})
@@ -240,15 +237,14 @@
 
 \subsection{Structure of Lab lectures}
 
-\begin{frame}[allowframebreaks]
-	\frametitle{Structure of the Lab}
+\begin{frame}[c,allowframebreaks]{Structure of the Lab}
 
 	An end-to-end path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
 	%
 	\medskip
 	%
 	\begin{enumerate}
-		\item you'll firstly learn how to program non-distributed concurrent systems
+		\item you will firstly learn how to program non-distributed concurrent systems
 		%
 		\begin{itemize}
 			\item through \alert{asynchronous programming}
@@ -256,7 +252,7 @@
 
 		\medskip
 
-		\item you'll then practice with systems involving several loci of control
+		\item you will then practice with systems involving several loci of control
 		%
 		\begin{itemize}
 			\item e.g. \alert{multi-agent systems}
@@ -265,7 +261,7 @@
 
 		\medskip
 
-		\item you'll then control agent's interactions through \alert{\linda{}'s tuple spaces}
+		\item you will then control agent's interactions through \alert{\linda{}'s tuple spaces}
 		%
 		\begin{itemize}
 			\item learning how they can be realised from scratch
@@ -274,7 +270,7 @@
 
 		\framebreak
 
-		\item you'll then leverage \alert{web services} to make tuple spaces distributed
+		\item you will then leverage \alert{web services} to make tuple spaces distributed
 		%
 		\begin{itemize}
 			\item learning about web-services and the ReST architectural style
@@ -283,7 +279,7 @@
 
 		\medskip
 
-		\item you'll then exploit tuple spaces to let agents interact \alert{over the network}
+		\item you will then exploit tuple spaces to let agents interact \alert{over the network}
 		%
 		\begin{itemize}
 			\item learning how to make distribution transparent in your system
@@ -295,7 +291,7 @@
 		\item you should finally have built your own framework for C\&DS
 		%
 		\begin{itemize}
-			\item enabling experiments and exercises about, e.g.:
+			\item enabling experiments and exercises about, e.g.
 			%
 			\begin{itemize}
 				\item deployment
@@ -310,21 +306,20 @@
 
 \subsection{Required Technologies and Skills}
 
-\begin{frame}[allowframebreaks]
-	\frametitle{Required Technologies and Skills}
+\begin{frame}[c,allowframebreaks]{Required Technologies and Skills}
 
 	\begin{block}{Legend}
 		\begin{multicols}{2}
 			\begin{itemize}
-				\item[$\checkmark$] We assume you know this topic
-				\item[$\rightarrow$] We teach this topic
+				\item[$\checkmark$] we assume you know this topic
+				\item[$\rightarrow$] we teach this topic
 			\end{itemize}
 		\end{multicols}
 	\end{block}
 
 	\begin{alertblock}{Required}
 		\begin{itemize}
-			\item[$\checkmark$] Decentralised Version Control Systems and \alert{Git}
+			\item[$\checkmark$] distributed version control systems (DVCS) \& \alert{Git}
 			%
 			\begin{itemize}
 				\item useful resources: \ccite{pianiniDvcs, proGit}
@@ -332,7 +327,7 @@
 
 			\vfill
 
-			\item[$\rightarrow$] Build automation tools and \alert{Gradle}
+			\item[$\rightarrow$] build automation tools and \alert{Gradle}
 			%
 			\begin{itemize}
 				\item useful resources: \ccite{pianiniBuildAutomation, gradleUserGuide}
@@ -354,15 +349,15 @@
 
 	\begin{exampleblock}{Useful}
 		\begin{itemize}
-			\item[$\checkmark$] Shell scripting and \alert{Bash}
-			\item[$\rightarrow$] Containerisation and \alert{Docker}
-			\item[$\checkmark$] Basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})
+			\item[$\checkmark$] shell scripting and \alert{Bash}
+			\item[$\rightarrow$] containerisation and \alert{Docker}
+			\item[$\checkmark$] basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})
 		\end{itemize}
 	\end{exampleblock}
 
 	\begin{alertblock}{Setting up your own environment}
 		\begin{itemize}
-			\item[!] Follow the instructions provided here: \ccite{envSetup}
+			\item[!] follow the instructions provided here: \ccite{envSetup}
 		\end{itemize}
 	\end{alertblock}
 
@@ -370,11 +365,10 @@
 
 \section{Conventions and Suggestions}
 
-\begin{frame}%[allowframebreaks]
-	\frametitle{About Lab Exercises}
+\begin{frame}[c]{About Lab Exercises}
 
 	\begin{itemize}
-		\item You're supposed to learn something, not just solving puzzles
+		\item you are supposed to learn something, not just solving puzzles
 		%
 		\begin{itemize}
 			\item no deadline, no mark
@@ -385,7 +379,7 @@
 
 		\vfill
 
-		\item Comprehension of Lab-related topics is checked before final exam:
+		\item comprehension of Lab-related topics is checked before final exam:
 		%
 		\begin{itemize}
 			\item \alert{expected workflow:} Lab activity check $\rightarrow$ Admission to final exam
@@ -395,7 +389,7 @@
 
 		\vfill
 
-		\item Exercises are provided as GitLab repositories hosting Gradle projects
+		\item exercises are provided as GitLab repositories hosting Gradle projects
 		%
 		\begin{itemize}
 			\item you need a GitLab account $\rightarrow$ follow the instructions described in \ccite{envSetup}
@@ -403,26 +397,25 @@
 
         \vfill
 
-        \item Slides are provided as \emph{versioned} PDF, through GitHub releases
+        \item slides are provided as \emph{versioned} PDF, through GitHub releases
         %
         \begin{itemize}
-            \item[eg] \url{https://github.com/gciatto-unibo/sd-lab-environment-configuration/releases}
-            \item[eg] \url{https://github.com/gciatto-unibo/sd-lab-about/releases}
+            \item[eg] \uurl{https://github.com/gciatto-unibo/sd-lab-environment-configuration/releases}
+            \item[eg] \uurl{https://github.com/gciatto-unibo/sd-lab-about/releases}
         \end{itemize}
 
 	\end{itemize}
 
 \end{frame}
 
-\begin{frame}%[allowframebreaks]
-    \frametitle{About Exercises Submissions}
+\begin{frame}[c]{About Exercises Submissions}
 
     \begin{itemize}
-        \item Solutions must be pushed on the same GitLab repository exercises have been cloned from, \alert{through Git}
+        \item solutions must be pushed on the same GitLab repository exercises have been cloned from, \alert{through Git}
 
         \vfill
 
-        \item To this end, you create a GitLab account, following instructions provided in \ccite{envSetup}:
+        \item to this end, you create a GitLab account, following instructions provided in \ccite{envSetup}:
         %
         \begin{itemize}
             \item possibly, using your institutional credentials \texttt{\alert{name.surnameN}@studio.unibo.it}
@@ -431,7 +424,7 @@
 
         \vfill
 
-        \item After that, you are supposed to request access on the DS 20-21 GitLab group:
+        \item after that, you are supposed to request access on the DS 20-21 GitLab group:
         %
         \begin{itemize}
             \item \url{https://gitlab.com/pika-lab/courses/ds/ay2021}
@@ -439,7 +432,7 @@
 
         \vfill
 
-        \item Solutions must be pushed on a branch named \alert{\texttt{submissions/\textit{name.surnameN}}}, as described in \ccite{envSetup}
+        \item solutions must be pushed on a branch named \alert{\texttt{submissions/\textit{name.surnameN}}}, as described in \ccite{envSetup}
         %
         \begin{itemize}
             \item one solution per student ($\implies$ no group submissions)
@@ -448,15 +441,15 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}%[allowframebreaks]
-\frametitle{About forums}
+\begin{frame}[c]{About Fora}
     \begin{itemize}
-        \item Use the forum as much as possible: \url{https://virtuale.unibo.it/mod/forum/view.php?id=331530}
+        \item use the forum as much as possible\\
+        \uurl{https://virtuale.unibo.it/mod/forum/view.php?id=331530}
         %
         \begin{itemize}
             \item don't be shy :)
-            \item ask for help / explanations if need it
-            \item ask why if you're curious
+            \item ask for help if you need it
+            \item ask why if you are curious
             \item compare you solutions
             \item be critical and provide suggestions if you feel so
         \end{itemize}
@@ -465,29 +458,29 @@
 
 \section{The Final Project}
 
-\begin{frame}%[allowframebreaks]
-    \frametitle{About Projects}
+\begin{frame}[c,allowframebreaks]{About Projects}
     \begin{itemize}
-        \item Detailed rules here: \uurl{https://virtuale.unibo.it/mod/page/view.php?id=331533}
+        \item detailed rules here\\
+        \uurl{https://virtuale.unibo.it/mod/page/view.php?id=331533}
 
         \vfill
 
-        \item Workflow overview:
+        \item workflow overview
         %
         \begin{enumerate}
-            \item Choose a project or propose one
-            \item Reserve your project on the \href{https://virtuale.unibo.it/mod/forum/view.php?id=331532}{Projects forum}
-            \item Submit an \alert{initial report}, describing your own requirements
-            \item Receive a Git repository for tracking the development of your artefacts
-            \item Develop your projects
-            \item Write the \alert{final report}
-            \item Submit your project \alert{code \& report} and ask for lab activity check
-            \item Set up an appointment for discussing your project
+            \item choose a project or propose one
+            \item reserve your project on the \href{https://virtuale.unibo.it/mod/forum/view.php?id=331532}{Projects forum}
+            \item submit an \alert{initial report}, describing your own requirements
+            \item receive a Git repository for tracking the development of your artefacts
+            \item develop your projects
+            \item write the \alert{final report}
+            \item submit your project \alert{code \& report} and ask for lab activity check
+            \item set up an appointment for discussing your project
         \end{enumerate}
 
         \vfill
 
-        \item Group projects are allowed (max 3-4 persons)
+        \item group projects are allowed (max 4 persons)
         %
         \begin{itemize}
             \item rule of thumb: $\sim90$ working hours per person per project
