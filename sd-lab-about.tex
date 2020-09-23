@@ -145,7 +145,7 @@
 			\item which and how many sorts \alert{domain entities} are involved into a system,
 			\item whether they are \alert{pro-active} or \alert{reactive},
 			\item what's their \alert{behavioural specification}, and
-			\item when with whom they can \alert{interact}
+			\item when and with whom they can \alert{interact}
 		\end{enumerate}
 	\end{block}
 
@@ -156,7 +156,16 @@
 		%
 		\begin{itemize}
 			\item systems composed by several \alert{loci of control},
+			%
+			\begin{itemize}
+				\item[eg] threads, event-loops, actors, or \alert{agents}
+			\end{itemize}
+		
 			\item as well as the \alert{communication means} among them
+			%
+			\begin{itemize}
+				\item[eg] channels, streams, messages, \alert{tuple spaces}
+			\end{itemize}
 		\end{itemize}
 
 		\bigskip
@@ -175,7 +184,7 @@
 			\item whether the interaction involves \alert{two or more} entities
 			\item which entities must \alert{initiate} interaction (acting as clients)
 			\item which entities must \alert{wait} for interaction to be initiated (servers)
-			\item whether interaction should be me \alert{mediated} or not
+			\item whether interaction should be \alert{mediated} or not
 			\item which information should be provided by each entity, and \alert{when}
 			\item how should this information be \alert{structured}
 		\end{itemize}
@@ -193,7 +202,7 @@
 
 		\bigskip
 
-		\item[$\rightarrow$] method calls or sockets from OOP programming are not adequate
+		\item[$\rightarrow$] Method calls or sockets from OOP programming are not adequate
 		%
 		\begin{itemize}
 			\item we need higher level notions such as \alert{FIPA's IP}, or \alert{\linda{}'s primitives}
