@@ -29,6 +29,15 @@
 \end{frame}
 }
 
+\AtBeginSubsection[]
+{
+    \begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
+        %	\begin{multicols}{2}
+        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
+        %	\end{multicols}
+    \end{frame}
+}
+
 \begin{document}
 
 \maketitle
@@ -157,7 +166,7 @@
 			\begin{itemize}
 				\item[eg] threads, event-loops, actors, or \alert{agents}
 			\end{itemize}
-		
+
 			\item as well as the \alert{communication means} among them
 			%
 			\begin{itemize}
