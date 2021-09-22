@@ -23,18 +23,18 @@
 \AtBeginSection[]
 {
 \begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
-%	\begin{multicols}{2}
-	\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-%	\end{multicols}
+%    \begin{multicols}{2}
+    \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
+%    \end{multicols}
 \end{frame}
 }
 
 \AtBeginSubsection[]
 {
     \begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
-        %	\begin{multicols}{2}
+        %    \begin{multicols}{2}
         \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-        %	\end{multicols}
+        %    \end{multicols}
     \end{frame}
 }
 
@@ -44,7 +44,7 @@
 
 \begin{frame}[c]\frametitle{Outline}
     % \begin{multicols}{2}
-	    \tableofcontents[sectionstyle=show/show, subsectionstyle=show/show, subsubsectionstyle=show/show]
+        \tableofcontents[sectionstyle=show/show, subsectionstyle=show/show, subsubsectionstyle=show/show]
     % \end{multicols}
 \end{frame}
 
@@ -55,54 +55,54 @@
 \begin{frame}[c,allowframebreaks]{Dimensions of Software (Engineering)}
 
     \begin{block}{In your Bachelor's you learnt how to properly \textbf{design}}
-    	\begin{itemize}
-    		\item the \alert{structure} of \emph{non-concurrent} systems
-    		\item the \alert{behaviour} of most common algorithm in computer science (CS)
-    		\item and how to implement \emph{non-distributed} systems
-    	\end{itemize}
+        \begin{itemize}
+            \item the \alert{structure} of \emph{non-concurrent} systems
+            \item the \alert{behaviour} of most common algorithm in computer science (CS)
+            \item and how to implement \emph{non-distributed} systems
+        \end{itemize}
     \end{block}
 
-	\framebreak
+    \framebreak
 
-	\begin{alertblock}{However, there are 3 major \textbf{dimensions} of Software (Engineering)}
-		\begin{description}
-			\item[structure] -- how domain entities are composed and relate
-			\item[behaviour] -- which algorithms govern their behaviour
-			\item[\textbf{interaction}] -- when they are allowed to exchange information, and how
-		\end{description}
-	\end{alertblock}
-	%
-	\hint{these are just insights, not definitions}
+    \begin{alertblock}{However, there are 3 major \textbf{dimensions} of Software (Engineering)}
+        \begin{description}
+            \item[structure] -- how domain entities are composed and relate
+            \item[behaviour] -- which algorithms govern their behaviour
+            \item[\textbf{interaction}] -- when they are allowed to exchange information, and how
+        \end{description}
+    \end{alertblock}
+    %
+    \hint{these are just insights, not definitions}
 
-	\framebreak
+    \framebreak
 
-	\begin{exampleblock}{In concurrent and distributed systems}
-		\begin{itemize}
-			\item the interaction dimension is of paramount importance
-			\item as well as aspects related to
-			%
-			\begin{itemize}
-				\item the \alert{software architecture}
-				\item the \alert{control flow(s)}
-			\end{itemize}
-		\end{itemize}
-	\end{exampleblock}
+    \begin{exampleblock}{In concurrent and distributed systems}
+        \begin{itemize}
+            \item the interaction dimension is of paramount importance
+            \item as well as aspects related to
+            %
+            \begin{itemize}
+                \item the \alert{software architecture}
+                \item the \alert{control flow(s)}
+            \end{itemize}
+        \end{itemize}
+    \end{exampleblock}
 
-	\bigskip
+    \bigskip
 
-%	\begin{exampleblock}{In fact}
-	One can describe and design concurrent/distributed systems as:
-	%
-	\begin{itemize}
-		\item systems composed by several \alert{pro-active} entities
-		%
-		\begin{itemize}
-			\item[ie] entities \alert{encapsulating} ($\approx$ having) their own \alert{control flow}
-		\end{itemize}
-		\item \alert{interacting} among each others
-		\item possibly, over the \alert{network}
-	\end{itemize}
-%	\end{exampleblock}
+%    \begin{exampleblock}{In fact}
+    One can describe and design concurrent/distributed systems as:
+    %
+    \begin{itemize}
+        \item systems composed by several \alert{pro-active} entities
+        %
+        \begin{itemize}
+            \item[ie] entities \alert{encapsulating} ($\approx$ having) their own \alert{control flow}
+        \end{itemize}
+        \item \alert{interacting} among each others
+        \item possibly, over the \alert{network}
+    \end{itemize}
+%    \end{exampleblock}
 
 \end{frame}
 
@@ -110,24 +110,24 @@
 
 \begin{frame}[c]{Goal of the Lab}
 
-	During the Lab lessons, we will progressively introduce you
-	%
-	\vfill
-	%
-	\begin{itemize}
-		\item to the \alert{design} of concurrent \& distributed systems (C\&DS)
+    During the Lab lessons, we will progressively introduce you
+    %
+    \vfill
+    %
+    \begin{itemize}
+        \item to the \alert{design} of concurrent \& distributed systems (C\&DS)
 
-		\vfill
+        \vfill
 
-		\item while providing a taste of
-		%
-		\begin{itemize}
-			\item the challenges \& subtleties posed by C\&DS
-			\item the most common architectural choices for C\&DS
-			\item the most adequate design \& programming abstractions for C\&DS
-		\end{itemize}
+        \item while providing a taste of
+        %
+        \begin{itemize}
+            \item the challenges \& subtleties posed by C\&DS
+            \item the most common architectural choices for C\&DS
+            \item the most adequate design \& programming abstractions for C\&DS
+        \end{itemize}
 
-	\end{itemize}
+    \end{itemize}
 
 \end{frame}
 
@@ -135,120 +135,196 @@
 
 \begin{frame}[c,allowframebreaks]{Engineering Concurrent \& Distributed Systems (C\&DS)}
 
-	Engineering C\&DS requires encompassing several, progressive phases
-	%
-	\begin{enumerate}
-		\item modelling
-		\item design
-		\item implementation
-		\item deployment
-	\end{enumerate}
+    Engineering C\&DS requires encompassing several, progressive phases
+    %
+    \begin{enumerate}
+        \item modelling
+        \item design
+        \item implementation
+        \item deployment
+    \end{enumerate}
 
-	\framebreak
+    \framebreak
 
-	\begin{block}{\textbf{Modellers} must define \textbf{domain}-related aspects}
-		\begin{enumerate}
-			\item which and how many sorts \alert{domain entities} are involved into a system,
-			\item whether they are \alert{pro-active} or \alert{reactive},
-			\item what's their \alert{behavioural specification}, and
-			\item when and with whom they can \alert{interact}
-		\end{enumerate}
-	\end{block}
+    \begin{block}{\textbf{Modellers} must define \textbf{domain}-related aspects}
+        \begin{enumerate}
+            \item which and how many sorts \alert{domain entities} are involved into a system,
+            \item whether they are \alert{pro-active} or \alert{reactive},
+            \item what's their \alert{behavioural specification}, and
+            \item when and with whom they can \alert{interact}
+        \end{enumerate}
+    \end{block}
 
-	\bigskip
+    \bigskip
 
-	\begin{itemize}
-		\item modellers must thus be able to govern
-		%
-		\begin{itemize}
-			\item systems composed by several \alert{loci of control},
-			%
-			\begin{itemize}
-				\item[eg] threads, event-loops, actors, or \alert{agents}
-			\end{itemize}
+    \begin{itemize}
+        \item modellers must thus be able to govern
+        %
+        \begin{itemize}
+            \item systems composed by several \alert{loci of control},
+            %
+            \begin{itemize}
+                \item[eg] threads, event-loops, actors, or \alert{agents}
+            \end{itemize}
 
-			\item as well as the \alert{communication means} among them
-			%
-			\begin{itemize}
-				\item[eg] channels, streams, messages, \alert{tuple spaces}
-			\end{itemize}
-		\end{itemize}
+            \item as well as the \alert{communication primitives} among them
+            %
+            \begin{itemize}
+                \item[eg] channels, streams, messages, or tuple spaces/centres
+            \end{itemize}
+        \end{itemize}
 
-		\bigskip
+        \bigskip
 
-		\item[$\rightarrow$] OOP patterns and UML are not adequate to capture these aspects
-		%
-		\begin{itemize}
-			\item we need higher level notions such as \alert{agents}, \alert{tuple spaces}, etc
-		\end{itemize}
-	\end{itemize}
+        \item[$\rightarrow$] OOP abstractions are not adequate to capture these aspects
+        %
+        \begin{itemize}
+            \item we need higher level abstractions such as agents, services, etc.
+        \end{itemize}
+    \end{itemize}
 
-	\framebreak
+    \framebreak
 
-	\begin{block}{\textbf{Designers} must address \textbf{architectural} aspects}
-		\begin{itemize}
-			\item whether the interaction involves \alert{two or more} entities
-			\item which entities must \alert{initiate} interaction (acting as clients)
-			\item which entities must \alert{wait} for interaction to be initiated (servers)
-			\item whether interaction should be \alert{mediated} or not
-			\item which information should be provided by each entity, and \alert{when}
-			\item how should this information be \alert{structured}
-		\end{itemize}
-	\end{block}
+    \begin{block}{\textbf{Designers} must address \textbf{architectural} aspects}
+        \begin{itemize}
+            \item whether the interaction involves \alert{two or more} entities
+            \item which entities must \alert{initiate} interaction (acting as clients)
+            \item which entities must \alert{wait} for interaction to be initiated (servers)
+            \item whether interaction should be \alert{mediated} or not
+            \item which information should be provided by each entity, and \alert{when}
+            \item how should this information be \alert{structured}
+        \end{itemize}
+    \end{block}
 
-	\bigskip
+    \bigskip
 
-	\begin{itemize}
-		\item designers must thus be able to govern
-		%
-		\begin{itemize}
-			\item interaction patterns (request-response, publish-subscribe, etc.),
-			\item and their properties
-		\end{itemize}
+    \begin{itemize}
+        \item designers must thus be able to govern
+        %
+        \begin{itemize}
+            \item interaction patterns (request-response, publish-subscribe, etc.)
+        \end{itemize}
 
-		\bigskip
+        \bigskip
 
-		\item[$\rightarrow$] method calls or sockets from OOP programming are not adequate
-		%
-		\begin{itemize}
-			\item we need higher level notions such as \alert{FIPA's IP}, or \alert{\linda{}'s primitives}
-		\end{itemize}
-	\end{itemize}
+        \item[$\rightarrow$] basic communication primitives are not sufficient at this level
+        %
+        \begin{itemize}
+            \item we need higher level notions such as \alert{interaction protocols}
+            \item architectural entities may serve this purpose, e.g. brokers, servers, etc.
+        \end{itemize}
+    \end{itemize}
 
-	\framebreak
+    \framebreak
 
-	\begin{block}{\textbf{Engineers} must tackle \textbf{technical} aspects}
-		\begin{enumerate}
-			\item let several loci of control \alert{co-exist} in an efficient \& scalable way\ldots
-			%
-			\begin{itemize}
-				\item possibly in spite of \alert{distribution}
-				\item possibly in spite of different \alert{execution platforms}
-			\end{itemize}
-			\item make their interaction \alert{observable \& debuggable}
-			\item chose the most adequate technological protocol\ldots
-			\item \ldots and data representation format
-			%
-			\begin{itemize}
-				\item in order to keep the system open, interoperable, evolvable, yet efficient
-			\end{itemize}
-		\end{enumerate}
-	\end{block}
+    \begin{block}{\textbf{Engineers} must tackle \textbf{technical} aspects}
+        \begin{enumerate}
+            \item let several loci of control \alert{co-exist} in an efficient \& scalable way\ldots
+            %
+            \begin{itemize}
+                \item possibly in spite of \alert{distribution}
+                \item possibly in spite of different \alert{execution platforms}
+            \end{itemize}
+            \item make their interaction \alert{observable \& debuggable}
+            \item chose the most adequate technological protocol\ldots
+            \item \ldots and data representation format
+            %
+            \begin{itemize}
+                \item in order to keep the system open, interoperable, evolvable, yet efficient
+            \end{itemize}
+        \end{enumerate}
+    \end{block}
 
-	\medskip
+    \medskip
 
-	\begin{itemize}
-		\item engineers must thus be able to govern
-		%
-		\begin{itemize}
-			\item middleware technologies (e.g. \jade{})
-			\item architectural styles (e.g. ReST)
-			\item application-level protocols (e.g. HTTP),
-			\item data-representation formats (e.g. JSON, YAML)
-		\end{itemize}
+    \begin{itemize}
+        \item engineers must thus be able to govern
+        %
+        \begin{itemize}
+            \item middleware technologies (e.g. \jade{})
+            \item architectural styles (e.g. ReST)
+            \item application-level protocols (e.g. HTTP),
+            \item data-representation formats (e.g. JSON, YAML)
+        \end{itemize}
+    \end{itemize}
 
-	\end{itemize}
+    \framebreak
 
+    \begin{block}{\textbf{System Engineers} must tackle \textbf{deployment}-related aspects}
+        \begin{itemize}
+            \item start system components in an \alert{orderly \& reproducible} way
+            \item remove/replace/update/replicate system components \alert{gracefully}
+            \item monitoring and managing remote components
+            \item ensure system components work \alert{predictably} despite heterogeneity
+            \item support stability despite the pace of software evolution
+        \end{itemize}
+    \end{block}
+
+    \begin{itemize}
+        \item system engineers must thus be able to \emph{also} govern
+        %
+        \begin{itemize}
+            \item containerisation and orchestration technologies (e.g. Docker)
+            \item build automation technologies (e.g. Gradle, Maven, NPM, PIP)
+            \item distributed version control systems (e.g. Git, Mercurial)
+            \item package managers and repositories (e.g. Maven, NPM, Nuget, PyPi)
+            \item multiple platforms and SDK (e.g. JVM, NodeJS, .NET, Python)
+        \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}[c, allowframebreaks]{About the the Lab}
+
+    \begin{block}{Rationale of the lab: make you \textbf{autonomous} in learning}
+        \begin{itemize}
+            \item Mastering distributed systems requires acquiring several notions
+            \begin{itemize}
+                \item[ie] being a modeller, designer, and (system) engineer, simultaneously
+                \item[!] too many knowledge for the 6 ECTS credits of the course
+            \end{itemize}
+
+            \item so, we select a small core of fundamental notions to be acquired
+            \begin{itemize}
+                \item enabling your autonomy in learning advanced aspects
+                \begin{itemize}
+                    \item[eg] in later courses or as part of your future career
+                \end{itemize}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Goal of the lab: prevent \textbf{obsolescence} of skills}
+        \begin{itemize}
+            \item Mastering distributed systems practising with several technologies
+            \begin{itemize}
+                \item programming platforms / languages, protocols, tools, etc.
+                \item[!] any technological choice will soon become \alert{outdated}
+            \end{itemize}
+
+            \item so, we select technologies which better exemplify relevant notions
+            \begin{itemize}
+                \item not necessarily the most efficient/updated ones
+            \end{itemize}
+
+            \item[!] we care you acquire durable \& general skill
+            \begin{itemize}
+                \item[$\rightarrow$] learning technologies is useful for today
+                \item[$\rightarrow$] acquiring the underlying notions is fundamental for tomorrow
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Our approach: \textbf{bottom-up}}
+        Make you
+        %
+        \begin{enumerate}
+            \item confident with development tools
+            \item practice with basic interaction-related aspects
+            \item experiment with articulated interaction protocols
+            \item taste the benefits of leveraging on full-fledged middlewares
+        \end{enumerate}
+    \end{block}
 \end{frame}
 
 \section{Organisation}
@@ -257,68 +333,64 @@
 
 \begin{frame}[c,allowframebreaks]{Structure of the Lab}
 
-	An end-to-end path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
-	%
-	\medskip
-	%
-	\begin{enumerate}
-		\item you will firstly learn how to program non-distributed concurrent systems
-		%
-		\begin{itemize}
-			\item through \alert{asynchronous programming}
-		\end{itemize}
+    An incremental path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
+    %
+    \medskip
+    %
+    \begin{enumerate}
+        \item we will first present the fundamentals of
+        %
+        \begin{itemize}
+            \item build automation and dependency management with Gradle
+            \item containerisation and orchestration with Docker
+        \end{itemize}
 
-		\medskip
+        \medskip
 
-		\item you will then practice with systems involving several loci of control
-		%
-		\begin{itemize}
-			\item e.g. \alert{multi-agent systems}
-			\item learning how \jade{} agents work and can be built from scratch
-		\end{itemize}
+        \item we will then recall the basics of
+        %
+        \begin{itemize}
+            \item multi-threading and asynchronous programming, on the JVM
+            \item (byte-)stream-oriented communication via Sockets, on the JVM
+        \end{itemize}
 
-		\medskip
+        \medskip
 
-		\item you will then control agent's interactions through \alert{\linda{}'s tuple spaces}
-		%
-		\begin{itemize}
-			\item learning how they can be realised from scratch
-			\item or exploited in flexible ways to implement several \alert{interaction patterns}
-		\end{itemize}
+        \item we will then present the notion of (de-)serialization
+        %
+        \begin{itemize}
+            \item proposing practical exercises with the Jackson data-processing library
+        \end{itemize}
 
-		\framebreak
+        \framebreak
 
-		\item you will then leverage \alert{web services} to make tuple spaces distributed
-		%
-		\begin{itemize}
-			\item learning about web-services and the ReST architectural style
-			\item learning how non-distributed systems can be made distributed
-		\end{itemize}
+        \item we will then present the notion of ReST API
+        %
+        \begin{itemize}
+            \item showing how they can be formalised via Swagger
+            \item discussing how web servers can be realised on the JVM, via Javalin
+            \item discussing how web clients can be realised on the JVM
+        \end{itemize}
 
-		\medskip
+        \medskip
 
-		\item you will then exploit tuple spaces to let agents interact \alert{over the network}
-		%
-		\begin{itemize}
-			\item learning how to make distribution transparent in your system
-			\item learning about the client- and server-side of a distributed system
-		\end{itemize}
+        \item we will then describe state-of-the-art tools for
+        %
+        \begin{itemize}
+            \item building distributed middlewares, e.g. via gRPC and Protobuff
+            \item uncoupling interacting entities, e.g. via RabbitMQ
+            \item replicating data over a number of distributed machines, e.g. via etcd
+        \end{itemize}
 
-		\medskip
+        \medskip
 
-		\item you should finally have built your own framework for C\&DS
-		%
-		\begin{itemize}
-			\item enabling experiments and exercises about, e.g.
-			%
-			\begin{itemize}
-				\item deployment
-				\item replication
-				\item consistency
-			\end{itemize}
-		\end{itemize}
+        \item finally, we will exemplify notable agent-oriented infrastructures
+        %
+        \begin{itemize}
+            \item such as \jade{}\ccite{jadebook-2007}, TuCSoN\ccite{tucson-jir98}, or TuSoW\ccite{tusow-icccn2019}
+        \end{itemize}
 
-	\end{enumerate}
+    \end{enumerate}
 
 \end{frame}
 
@@ -326,94 +398,128 @@
 
 \begin{frame}[c,allowframebreaks]{Required Technologies and Skills}
 
-	\begin{block}{Legend}
-		\begin{multicols}{2}
-			\begin{itemize}
-				\item[$\checkmark$] we assume you know this topic
-				\item[$\rightarrow$] we teach this topic
-			\end{itemize}
-		\end{multicols}
-	\end{block}
+    \begin{block}{Legend}
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item[$\checkmark$] we assume you know this topic
+                \item[$\rightarrow$] we teach this topic
+            \end{itemize}
+        \end{multicols}
+    \end{block}
 
-	\begin{alertblock}{Required}
-		\begin{itemize}
-			\item[$\checkmark$] distributed version control systems (DVCS) \& \alert{Git}
-			%
-			\begin{itemize}
-				\item useful resources: \ccite{pianiniDvcs, proGit}
-			\end{itemize}
+    \framebreak
 
-			\vfill
+    \begin{alertblock}{Required}
+        \begin{itemize}
+            \item[$\checkmark$] basic understanding of computer networks
+            %
+            \begin{itemize}
+                \item ISO/OSI and TCP/IP stacks
+            \end{itemize}
 
-			\item[$\rightarrow$] build automation tools and \alert{Gradle}
-			%
-			\begin{itemize}
-				\item useful resources: \ccite{pianiniBuildAutomation, gradleUserGuide}
-			\end{itemize}
+            \item[$\checkmark$] distributed version control systems (DVCS) \& \alert{Git}
+            %
+            \begin{itemize}
+                \item useful resources\ccite{pianiniDvcs, proGit}
+            \end{itemize}
 
-			\vfill
+            \vfill
 
-			\item Java programming, and, in particular:
-			%
-			\begin{itemize}
-				\item[$\checkmark$] collections API (useful resources: \ccite{Naftalin2006, Bloch2008, JavaCollectionsCheatsheets})
-				\item[$\checkmark$] streams and lambdas API (useful resources: \ccite{Warburton2014, Bloch2008})
-				\item[$\checkmark$] multi-threading API (useful resources: \ccite{Lea1999, Oaks2004, Garg2004, Goetz2006})
-				\item[$\rightarrow$] asynchronous programming API
-			\end{itemize}
+            \item[$\rightarrow$] build automation tools and \alert{Gradle}
+            %
+            \begin{itemize}
+                \item useful resources\ccite{pianiniBuildAutomation, gradleUserGuide}
+            \end{itemize}
 
-		\end{itemize}
-	\end{alertblock}
+            \vfill
 
-	\begin{exampleblock}{Useful}
-		\begin{itemize}
-			\item[$\checkmark$] shell scripting and \alert{Bash}
-			\item[$\rightarrow$] containerisation and \alert{Docker}
-			\item[$\checkmark$] basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})
-		\end{itemize}
-	\end{exampleblock}
+            \item[$\rightarrow$] containerisation, orchestration and \alert{Docker}
 
-	\begin{alertblock}{Setting up your own environment}
-		\begin{itemize}
-			\item[!] follow the instructions provided here: \ccite{envSetup}
-		\end{itemize}
-	\end{alertblock}
+            \vfill
+
+            \item OO programming in Java, and, in particular:
+            %
+            \begin{itemize}
+                \item[$\checkmark$] input/output API
+                \item[$\checkmark$] collections API (useful resources\ccite{Naftalin2006, Bloch2008, JavaCollectionsCheatsheets})
+                \item[$\checkmark$] streams and lambdas API (useful resources\ccite{Warburton2014, Bloch2008})
+                \item[$\checkmark$] multi-threading API (useful resources\ccite{Lea1999, Oaks2004, Garg2004, Goetz2006})
+                \item[$\rightarrow$] asynchronous programming API
+            \end{itemize}
+
+        \end{itemize}
+    \end{alertblock}
+
+    \begin{exampleblock}{Useful}
+        \begin{itemize}
+            \item[$\checkmark$] shell scripting and \alert{Bash}
+            \item[$\checkmark$] basic IDE configuration and usage (\alert{Eclipse} or \alert{IntelliJ Idea})
+        \end{itemize}
+    \end{exampleblock}
+
+    \begin{alertblock}{Setting up your own environment}
+        \begin{itemize}
+            \item[!] follow the instructions provided here: \cite{envSetup}
+        \end{itemize}
+    \end{alertblock}
 
 \end{frame}
 
 \section{Conventions and Suggestions}
 
-\begin{frame}[c]{About Lab Exercises}
+\begin{frame}[c,allowframebreaks]{About Lab Exercises}
 
-	\begin{itemize}
-		\item you are supposed to learn something, not just solving puzzles
-		%
-		\begin{itemize}
-			\item no deadline, no mark
-			\item[$\rightarrow$] take your time
-			\item[$\rightarrow$] ask for help on the forum
-			\item[$\rightarrow$] compare/discuss with your colleagues
-		\end{itemize}
+    \begin{itemize}
 
-		\vfill
+        \item lab lectures may involve one or more exercises
+        %
+        \begin{itemize}
+            \item commonly started during the lab lecture
+            \item rarely completed within the same lecture
+        \end{itemize}
 
-		\item comprehension of Lab-related topics is checked before final exam:
-		%
-		\begin{itemize}
-			\item \alert{expected workflow:} Lab activity check $\rightarrow$ Admission to final exam
-			\item check performed by tutor(s)
-			\item students must explicitly ask for the check, via email
-		\end{itemize}
+        \bigskip
 
-		\vfill
+        \item you are supposed to learn something, not just solving puzzles
+        %
+        \begin{itemize}
+            \item no deadline, no mark
+            \item[$\rightarrow$] take your time
+            \item[$\rightarrow$] ask for help on the forum
+            \item[$\rightarrow$] compare/discuss with your colleagues
+        \end{itemize}
 
-		\item exercises are provided as GitLab repositories hosting Gradle projects
-		%
-		\begin{itemize}
-			\item you need a GitLab account $\rightarrow$ follow the instructions described in \ccite{envSetup}
-		\end{itemize}
+        \bigskip
 
-        \vfill
+        \item exercises are \alert{optional by default}
+        %
+        \begin{itemize}
+            \item except those \emph{explicitly} marked as \alert{mandatory}
+            %
+            \begin{itemize}
+                \item[$\rightarrow$] mandatory = ``check for comprehension will eventually be checked''
+            \end{itemize}
+        \end{itemize}
+
+        \framebreak
+
+        \item comprehension of Lab-related topics is checked before final exam:
+        %
+        \begin{itemize}
+            \item \alert{expected workflow:} Lab activity check $\rightarrow$ Admission to final exam
+            \item check performed by tutor(s)
+            \item students must explicitly ask for the check, via email
+        \end{itemize}
+
+        \bigskip
+
+        \item exercises are provided as GitLab repositories hosting Gradle projects
+        %
+        \begin{itemize}
+            \item you need a GitLab account $\rightarrow$ follow the instructions described in \cite{envSetup}
+        \end{itemize}
+
+        \bigskip
 
         \item slides are provided as \emph{versioned} PDF, through GitHub releases
         %
@@ -422,7 +528,7 @@
             \item[eg] \uurl{https://github.com/gciatto-unibo/sd-lab-about/releases}
         \end{itemize}
 
-	\end{itemize}
+    \end{itemize}
 
 \end{frame}
 
@@ -433,7 +539,7 @@
 
         \vfill
 
-        \item to this end, you create a GitLab account, following instructions provided in \ccite{envSetup}:
+        \item to this end, you create a GitLab account, following instructions provided in \cite{envSetup}:
         %
         \begin{itemize}
             \item possibly, using your institutional credentials \texttt{\alert{name.surnameN}@studio.unibo.it}
@@ -442,15 +548,15 @@
 
         \vfill
 
-        \item after that, you are supposed to request access on the DS 20-21 GitLab group:
+        \item after that, you are supposed to request access on the DS 21-22 GitLab group:
         %
         \begin{itemize}
-            \item \url{https://gitlab.com/pika-lab/courses/ds/ay2021}
+            \item \url{https://gitlab.com/pika-lab/courses/ds/ay2122}
         \end{itemize}
 
         \vfill
 
-        \item solutions must be pushed on a branch named \alert{\texttt{submissions/\textit{name.surnameN}}}, as described in \ccite{envSetup}
+        \item solutions must be pushed on a branch named \alert{\texttt{submissions/\textit{name.surnameN}}}, as described in \cite{envSetup}
         %
         \begin{itemize}
             \item one solution per student ($\implies$ no group submissions)
@@ -461,8 +567,8 @@
 
 \begin{frame}[c]{About Fora}
     \begin{itemize}
-        \item use the forum as much as possible\\
-        \uurl{https://virtuale.unibo.it/mod/forum/view.php?id=331530}
+        \item use the general forum as much as possible\\
+        \uurl{https://virtuale.unibo.it/mod/forum/view.php?id=611839}
         %
         \begin{itemize}
             \item don't be shy :)
@@ -476,18 +582,18 @@
 
 \section{The Final Project}
 
-\begin{frame}[c,allowframebreaks]{About Projects}
+\begin{frame}[c]{About Projects}
     \begin{itemize}
         \item detailed rules here\\
-        \uurl{https://virtuale.unibo.it/mod/page/view.php?id=331533}
+        \uurl{https://github.com/gciatto-unibo/sd-project-rules}
 
         \vfill
 
         \item workflow overview
         %
         \begin{enumerate}
-            \item choose a project or propose one
-            \item reserve your project on the \href{https://virtuale.unibo.it/mod/forum/view.php?id=331532}{Projects forum}
+            \item \alert{choose} a project or \alert{propose} one
+            \item reserve your project on the \href{https://virtuale.unibo.it/mod/forum/view.php?id=611834}{Projects forum}
             \item submit an \alert{initial report}, describing your own requirements
             \item receive a Git repository for tracking the development of your artefacts
             \item develop your projects
@@ -506,6 +612,110 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}[c, allowframebreaks]{Sorts of Projects}
+
+    \begin{block}{Classic DS Project}
+        Develop a distributed application
+        %
+        \begin{itemize}
+            \item[eg] web application, distributed video game, etc
+            \item Workflow:
+            %
+            \begin{enumerate}
+                \item Sketch the idea
+                \item Design
+                \item Write tests
+                \item Implement
+                \item Pack / deploy for reusability
+            \end{enumerate}
+            \item Previous projects in this category: \cite{Sd2021ProjectGuessR,Sd2021ProjectCAHu}
+            \item[!] Innovation is limited here, thus we expect
+            %
+            \begin{itemize}
+                \item design to be optimal, implementation to be complete
+                \item all aspects of software engineering
+                %
+                \begin{itemize}
+                    \item[ie] testing, packaging, continuos integration
+                \end{itemize}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Advanced DS Project}
+        Provide an implementation for some distributed algorithm / protocol / architecture / model from the literature
+        %
+        \begin{itemize}
+            \item[eg] a consensus protocol, a distributed store, a data sharing protocol, etc.
+            \item Workflow:
+            %
+            \begin{enumerate}
+                \item Select \& study a paper form the literature
+                \item Design your implementation for the proposed contribution
+                \item Prototype an implementation
+                \item Pack / deploy for a demo
+            \end{enumerate}
+            \item Previous projects in this category: \cite{Sd2021ProjectZyzzyva, Sd2021HybridQuorum}
+            \item[!] Innovation is high here, thus we
+            %
+            \begin{itemize}
+                \item mostly care about the proposed design
+                \item implementation can be sub-optimal or embryonic
+                \item other aspects of software engineering have lower priority
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Research DS Project}
+        Help us extending some research product of ours with some feature
+        %
+        \begin{itemize}
+            \item[eg] TuCSoN\ccite{tusow-icccn2019}, TuSoW\ccite{tusow-icccn2019}, LPaaS\ccite{lpaas-bdcc2}, tuProlog\ccite{2pkt-softwarex}, etc.
+            \item Workflow:
+            %
+            \begin{enumerate}
+                \item Study the target research product
+                \item Collect requirements by interacting with us
+                \item Co-design the feature by interacting with us
+                \item Implement \& test the feature
+            \end{enumerate}
+            \item Previous projects in this category: \cite{Sd2021ProjectTusowCSharpInterface}
+            \item[!] Innovation is high here, but the activity is very constrained
+            %
+            \begin{itemize}
+                \item design and implementation must be expert-level
+                \item testing, and continuos integration are mandatory
+                \item you will be considered part of development team
+                \item you will be part of the author list of any subsequent paper
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Technology Know-How DS Project}
+        Study a technology of choice in depth, producing a technical report
+        %
+        \begin{itemize}
+            \item Workflow:
+            %
+            \begin{enumerate}
+                \item Select a technology, study its documentation
+                \item Understand its major abstraction
+                \item Experiment with its deployment, and ordinary usage
+                \item Stress it with extra-ordinary usage
+                \item Report about the technology and the experiment
+            \end{enumerate}
+            \item Previous projects in this category: \ccite{Sd2021ProjectEtcd,Sd2021ProjectCEPH,Sd2021ProjectKubernetes}
+            \item[!] Focus here is on the technical report, other than the experiments
+            %
+            \begin{itemize}
+                \item software artefacts here consist of the code of the experiments
+                \item avoid copy-pasting the documentation, use your own words
+                \item experiment should cover more than the official ones
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
 %===============================================================================
 \section*{}
 %===============================================================================
@@ -518,12 +728,12 @@
 \setbeamertemplate{page number in head/foot}{}
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[t,allowframebreaks,noframenumbering]\frametitle{\refname}
-	% \begin{frame}[c]\frametitle{\refname}
-	%	\footnotesize
-	%	\scriptsize
-		\tiny
-	\bibliographystyle{plain}
-	\bibliography{sd-lab-about}
+    % \begin{frame}[c]\frametitle{\refname}
+    %    \footnotesize
+    %    \scriptsize
+        \tiny
+    \bibliographystyle{plain}
+    \bibliography{sd-lab-about}
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
