@@ -16,7 +16,7 @@
 \institute[DISI, Univ. Bologna]
 {Dipartimento di Informatica -- Scienza e Ingegneria (DISI)\\\textsc{Alma Mater Studiorum} -- Universit{\`a} di Bologna a Cesena}
 %
-\date[A.Y. 2020/2021]{Academic Year 2020/2021}
+\date[A.Y. 2021/2022]{Academic Year 2021/2022}
 
 \setbeamercovered{transparent}
 
@@ -110,12 +110,12 @@
 
 \begin{frame}[c]{Goal of the Lab}
 
-    During the Lab lessons, we will progressively introduce you
+    Within Lab lectures, we will progressively introduce you
     %
     \vfill
     %
     \begin{itemize}
-        \item to the \alert{design} of concurrent \& distributed systems (C\&DS)
+        \item the fundamental aspects of concurrent \& distributed systems (C\&DS)
 
         \vfill
 
@@ -123,8 +123,11 @@
         %
         \begin{itemize}
             \item the challenges \& subtleties posed by C\&DS
-            \item the most common architectural choices for C\&DS
             \item the most adequate design \& programming abstractions for C\&DS
+            %
+            \begin{itemize}
+                \item and some technologies supporting them
+            \end{itemize}
         \end{itemize}
 
     \end{itemize}
@@ -226,8 +229,8 @@
                 \item possibly in spite of different \alert{execution platforms}
             \end{itemize}
             \item make their interaction \alert{observable \& debuggable}
-            \item chose the most adequate technological protocol\ldots
-            \item \ldots and data representation format
+            \item chose the most adequate \alert{technological protocol}\ldots
+            \item \ldots and data \alert{representation format}
             %
             \begin{itemize}
                 \item in order to keep the system open, interoperable, evolvable, yet efficient
@@ -254,9 +257,9 @@
         \begin{itemize}
             \item start system components in an \alert{orderly \& reproducible} way
             \item remove/replace/update/replicate system components \alert{gracefully}
-            \item monitoring and managing remote components
+            \item \alert{monitoring} and managing remote components
             \item ensure system components work \alert{predictably} despite heterogeneity
-            \item support stability despite the pace of software evolution
+            \item support \alert{stability} despite the pace of software \alert{evolution}
         \end{itemize}
     \end{block}
 
@@ -319,10 +322,10 @@
         Make you
         %
         \begin{enumerate}
-            \item confident with development tools
-            \item practice with basic interaction-related aspects
-            \item experiment with articulated interaction protocols
-            \item taste the benefits of leveraging on full-fledged middlewares
+            \item confident with \alert{development tools}
+            \item practice with basic aspects of \alert{remote communication}
+            \item experiment with articulated \alert{interaction patterns}
+            \item taste the benefits of leveraging on full-fledged \alert{middlewares}
         \end{enumerate}
     \end{block}
 \end{frame}
@@ -333,7 +336,7 @@
 
 \begin{frame}[c,allowframebreaks]{Structure of the Lab}
 
-    An incremental path providing a taste of all the aforementioned issues (showing how main notions are built \& exploited C\&DS)
+    An incremental path providing a taste of all the aforementioned issues: %(showing how main notions are built \& exploited C\&DS)
     %
     \medskip
     %
@@ -341,8 +344,8 @@
         \item we will first present the fundamentals of
         %
         \begin{itemize}
-            \item build automation and dependency management with Gradle
-            \item containerisation and orchestration with Docker
+            \item \alert{build automation} and \emph{dependency management} with Gradle
+            \item \alert{containerisation} and \alert{orchestration} with Docker
         \end{itemize}
 
         \medskip
@@ -350,26 +353,27 @@
         \item we will then recall the basics of
         %
         \begin{itemize}
-            \item multi-threading and asynchronous programming, on the JVM
-            \item (byte-)stream-oriented communication via Sockets, on the JVM
+            \item \alert{multi-threading} and \alert{asynchronous programming}, on the JVM
+            \item (byte-)stream-oriented \alert{communication via Sockets}, on the JVM
         \end{itemize}
 
         \medskip
 
-        \item we will then present the notion of (de-)serialization
+        \item we will then present the notion of \alert{(de-)serialization}
         %
         \begin{itemize}
+            \item and its usage for (un)marshalling data in remote communications
             \item proposing practical exercises with the Jackson data-processing library
         \end{itemize}
 
         \framebreak
 
-        \item we will then present the notion of ReST API
+        \item we will then present the notion of \alert{ReST API}
         %
         \begin{itemize}
-            \item showing how they can be formalised via Swagger
-            \item discussing how web servers can be realised on the JVM, via Javalin
-            \item discussing how web clients can be realised on the JVM
+            \item showing how they can be \alert{formalised} via Swagger
+            \item discussing how \alert{web servers} can be realised on the JVM, via Javalin
+            \item discussing how \alert{web clients} can be realised on the JVM
         \end{itemize}
 
         \medskip
@@ -377,14 +381,14 @@
         \item we will then describe state-of-the-art tools for
         %
         \begin{itemize}
-            \item building distributed middlewares, e.g. via gRPC and Protobuff
-            \item uncoupling interacting entities, e.g. via RabbitMQ
-            \item replicating data over a number of distributed machines, e.g. via etcd
+            \item building \alert{service-oriented applications}, e.g. via gRPC and Protobuff
+            \item \alert{temporally uncoupling} interacting entities, e.g. via RabbitMQ
+            \item \alert{replicating} data over a number of distributed machines, e.g. via etcd
         \end{itemize}
 
         \medskip
 
-        \item finally, we will exemplify notable agent-oriented infrastructures
+        \item finally, we will exemplify notable \alert{agent-oriented infrastructures}
         %
         \begin{itemize}
             \item such as \jade{}\ccite{jadebook-2007}, TuCSoN\ccite{tucson-jir98}, or TuSoW\ccite{tusow-icccn2019}
@@ -420,7 +424,7 @@
             \item[$\checkmark$] distributed version control systems (DVCS) \& \alert{Git}
             %
             \begin{itemize}
-                \item useful resources\ccite{pianiniDvcs, proGit}
+                \item useful resources: \cite{pianiniDvcs, proGit}
             \end{itemize}
 
             \vfill
@@ -428,7 +432,7 @@
             \item[$\rightarrow$] build automation tools and \alert{Gradle}
             %
             \begin{itemize}
-                \item useful resources\ccite{pianiniBuildAutomation, gradleUserGuide}
+                \item useful resources: \cite{pianiniBuildAutomation, gradleUserGuide}
             \end{itemize}
 
             \vfill
@@ -440,10 +444,10 @@
             \item OO programming in Java, and, in particular:
             %
             \begin{itemize}
-                \item[$\checkmark$] input/output API
-                \item[$\checkmark$] collections API (useful resources\ccite{Naftalin2006, Bloch2008, JavaCollectionsCheatsheets})
-                \item[$\checkmark$] streams and lambdas API (useful resources\ccite{Warburton2014, Bloch2008})
-                \item[$\checkmark$] multi-threading API (useful resources\ccite{Lea1999, Oaks2004, Garg2004, Goetz2006})
+                \item[$\checkmark$] input/output API (useful resources: \cite{ProgrammizJavaIO})
+                \item[$\checkmark$] collections API (useful resources: \cite{Naftalin2006, Bloch2008, JavaCollectionsCheatsheets})
+                \item[$\checkmark$] streams and lambdas API (useful resources: \cite{Warburton2014, Bloch2008})
+                \item[$\checkmark$] multi-threading API (useful resources: \cite{Lea1999, Oaks2004, Garg2004, Goetz2006})
                 \item[$\rightarrow$] asynchronous programming API
             \end{itemize}
 
@@ -704,7 +708,7 @@
                 \item Stress it with extra-ordinary usage
                 \item Report about the technology and the experiment
             \end{enumerate}
-            \item Previous projects in this category: \ccite{Sd2021ProjectEtcd,Sd2021ProjectCEPH,Sd2021ProjectKubernetes}
+            \item Previous projects in this category: \cite{Sd2021ProjectEtcd,Sd2021ProjectCEPH,Sd2021ProjectKubernetes}
             \item[!] Focus here is on the technical report, other than the experiments
             %
             \begin{itemize}
