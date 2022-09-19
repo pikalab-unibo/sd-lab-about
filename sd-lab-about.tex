@@ -1,43 +1,33 @@
-% !TeX spellcheck = en_GB
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SD Lab -- Topic
+% Giovanni Ciatto
+% Alma Mater Studiorum - Università di Bologna
+% mailto:giovanni.ciatto@unibo.it
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[handout]{beamer}\mode<handout>{\usetheme{default}}
+%
 \documentclass[presentation]{beamer}\mode<presentation>{\usetheme{AMSBolognaFC}}
-\setbeamertemplate{bibliography item}{\insertbiblabel}
-
-\usepackage{common}
-
-\title[L0 -- About the Lab]{About the Lab}
-%
-\subtitle[SD]
-{Distributed Systems\\\scriptsize Technologies}
-%
-\author[Ciatto \and Omicini]
-{\emph{Giovanni Ciatto} \and Andrea Omicini\\
-\texttt{giovanni.ciatto@unibo.it \and andrea.omicini@unibo.it}}
-%
-\institute[DISI, Univ. Bologna]
-{Dipartimento di Informatica -- Scienza e Ingegneria (DISI)\\\textsc{Alma Mater Studiorum} -- Universit{\`a} di Bologna a Cesena}
-%
-\date[A.Y. 2021/2022]{Academic Year 2021/2022}
-
-\setbeamercovered{transparent}
-
-\AtBeginSection[]
-{
-\begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
-%    \begin{multicols}{2}
-    \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-%    \end{multicols}
-\end{frame}
+%\documentclass[handout]{beamer}\mode<handout>{\usetheme{AMSBolognaFC}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sd-lab-common}
+\usepackage{sd-lab-about}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[\currentLab{} -- About]{
+	About the course
 }
-
-\AtBeginSubsection[]
-{
-    \begin{frame}[c,noframenumbering]\frametitle{Next in Line\ldots}
-        %    \begin{multicols}{2}
-        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide, subsubsectionstyle=hide/hide]
-        %    \end{multicols}
-    \end{frame}
+%
+\subtitle{\courseName{} / Module \moduleN{} (\courseAcronym)}
+%
+\author[\sspeaker{\gcShort} \& \mmShort]{
+	\speaker{\gcFull} \and \mmFull
+	\\
+	\gcEmail \and \mmEmail
 }
-
+%
+\institute[\disiShort, \uniboShort]{\disi{} (\disiShort)\\\unibo}
+%
+\date[A.Y. \academicYear{}]{Academic Year \academicYear{}}
+%
 \begin{document}
 
 \maketitle
@@ -528,8 +518,8 @@
         \item slides are provided as \emph{versioned} PDF, through GitHub releases
         %
         \begin{itemize}
-            \item[eg] \uurl{https://github.com/gciatto-unibo/sd-lab-environment-configuration/releases}
-            \item[eg] \uurl{https://github.com/gciatto-unibo/sd-lab-about/releases}
+            \item[eg] \uurl{\githubsd{lab-environment-configuration/releases}}
+            \item[eg] \uurl{\githubsd{lab-about/releases}}
         \end{itemize}
 
     \end{itemize}
@@ -552,10 +542,10 @@
 
         \vfill
 
-        \item after that, you are supposed to request access on the DS 21-22 GitLab group:
+        \item after that, you are supposed to request access on the DS \academicYearShort{} GitLab group:
         %
         \begin{itemize}
-            \item \url{https://gitlab.com/pika-lab/courses/ds/ay2122}
+            \item \url{\gitlabGroup}
         \end{itemize}
 
         \vfill
@@ -571,8 +561,9 @@
 
 \begin{frame}[c]{About Fora}
     \begin{itemize}
-        \item use the general forum as much as possible\\
-        \uurl{https://virtuale.unibo.it/mod/forum/view.php?id=611839}
+        \item use the general forum as much as possible
+        \\
+        \uurl{\generalForum}
         %
         \begin{itemize}
             \item don't be shy :)
@@ -588,8 +579,9 @@
 
 \begin{frame}[c]{About Projects}
     \begin{itemize}
-        \item detailed rules here\\
-        \uurl{https://github.com/gciatto-unibo/sd-project-rules}
+        \item detailed rules here
+        \\
+        \uurl{\githubsd{project-rules}}
 
         \vfill
 
